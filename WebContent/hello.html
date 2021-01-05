@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제목은 안녕</title>
+</head>
+<body> <!-- tag -->
+안녕 HTML
+나도 안녕  <br>반            가워<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;나도!!!<br> <!-- xml문법이 까다롭지만 조직적이고 구체화되어있어서 환경설정파일에 쓴다 -->
+xhtml이 doctype이면 br태그는 <br />로 오픈, 클로즈를 명시
+<p>인사에 대해</p>
+<p>빈칸 한줄이 생기네</p>
+<p>머야</p>
+
+  <h1>hello HTML</h1>
+</body>
+</html>
+
+<meta charset="UTF-8"> <!-- character set : 한글처리, utf-8 -->
+<title>비안옴</title>
+</head>
+<body bgcolor="ivory" text="black">
+<h1>아하</h1>
+<!-- 속성=값 배경색은 노랑, 글자색은 파랑 -->
+<!-- green red blue ivory cyan orange pink violet -->
+<font color="pink" size=10>오늘 비오는감</font>
+아니 맑아<br>
+그래&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요?<br />
+<!-- 단축키는 없고 &nbsp; &nbsp; &nbsp; 이렇게하면 빈칸 6개랑 같음 -->
+
+<!-- 글자에 뭔 짓을 한거야 -->
+<b>어느 구름에서 비올지 몰라</b> <br> <!-- bold -->
+<i>어느 구름에서 비올지 몰라</i> <br> <!-- italic -->
+<blink>어느 구름에서 비올지 몰라</blink> <br> <!-- 이전 IE, 사용안함 -->
+<strike>어느 구름에서 비올지 몰라</strike> <br> <!-- 취소선 -->
+<u>어느 구름에서 비올지 몰라</u> <br> <!-- underline -->
+<code>어느 <sub>구름에서</sub> <sup>비올지 몰라</sup> </code> <br> <!-- typing글씨체 -->
+<!-- sub은 아래로 sup은 위로 -->
+
+y=x<sup>2</sup>
+y=log<sub>10</sub>x
+<br>
+<!-- H태그 -->
+<h1><code>제목과 내용을 크기를 다르게</code> </h1>
+<h2>제목과 내용을 크기를 다르게</h2>
+<h3>제목과 내용을 크기를 다르게</h3>
+<h4>제목과 내용을 크기를 다르게</h4>
+<h5>제목과 내용을 크기를 다르게</h5>
+<h6>제목과 내용을 크기를 다르게</h6>
+
+<!-- 반응형 웹 : responsive web / 정적웹 : static web
+bootstrap -->
+
+<!-- p태그 br태그 -->
+후덥지근한 교실의 여름과 절정의 여름<br>
+레몬향이 넘실거리는 첫사랑의 맛이 나<p>
+햇살을 받아 연한 갈색으로 빛나던 네 머리카락<br>
+돌아갈 수는 없어도 펼치면 어제처럼 생생한<p>
+낡은 머릿속에서 돌아가는 단편 필름들<br>
+<p>
+singer song writer
+<p align="center"> 보고싶을때<br>
+보고싶다고 </p>
+
+<p align="right"> 말할 수 있는 건<br>
+어떠한 관계여서 </p>
+
+<p align="left"> 누릴 수 있는<br>
+특권이다 </p>
+
+<center>
+<font color="pink">
+나는<br>
+사랑을 구원이라 믿는다</font><br>
+</center>
+
+<!-- pre가 있으면 내가 쓴 그대로 나온다 -->
+<pre>
+<h1>
+나정이와 쓰레기가 나오는 것은 응4
+서인국과 정은지가 주인공인 것은 응7
+응8에서는..
+</h1>
+</pre>
+
+<!-- 자바에서 글자가 지나가게 하는 것 예로, 여기는 종로3가역입니다
+문자열.substring() gui로 작성해야 나옴 -->
+
+<marquee direction="left"><h1>다음역은 종로3가</h1></marquee>
+
+<marquee behavior="alternate">
+<h1>다음역은종로3가</h1></marquee>
+
+<marquee direction="right" behavior="scroll">
+<h1>다음역은 종로3가</h1></marquee>
+
+<!-- 화면 area slide후 멈춤 -->
+<marquee direction="right" behavior="slide">
+<h1>다음역은 종로3가</h1></marquee>
+
+<!-- picture element 50픽셀씩 스크롤된다는 것, 픽셀이 크면 속도가 빠름 -->
+<marquee behavior="scroll" scrollamount="50">
+<h1>커피 1+1행사, 조금있으면 행사 끝</h1></marquee>
+
+<!-- loop는 스크롤 반복횟수 -->
+<marquee behavior="scroll" loop=2>
+<h1>커피 1+1행사, 조금있으면 행사끝!!! 뭐?</h1></marquee>
+
+<!-- css가 html tag에서 사용시 -->
+<marquee width=800 height=200 bgcoloor="pink"
+behavior="scroll" scrolldelay=50>
+<!-- 스크롤 가로세로 영역 스크롤이동속도 50*(1/1000초)
+즉, 50ms마다 스크롤 발생 -->
+<h1>커피 1+1행사, 조금있으면 행사 끝</h1></marquee>
+
+<!-- 그림 넣는 방법
+<img src="그림이름"> -->
+
+<img src="./picture/cafe.jpg" ><br>
+<!-- .이 내방 -->
+<img src="./picture/bb.jpg"><br>
+<img src="./picture/bb.jpg">&nbsp;<img src="./picture/bb.jpg"><hr>
+
+
+표만들기
+<table>
+<tr>
+<td>안</td><td>녕</td>
+</tr>
+<tr>
+<td>안</td><td>녕</td>
+</tr>
+</table>
+
+
+<table border="0">
+<tr align="center">
+<td><img src="./picture/bb.jpg" width="300px"></td>
+<td><img src="./picture/bb.jpg" width="300px"></td>
+</tr>
+<tr align="center">
+<td><h3>정말 권하고 싶은 커퓨ㅣ</h3></td>
+<td><h3>맛있어서 말잇못</h3></td>
+</tr>
+</table>
+
+보더 5했더니 선 생기고 10했더니 엄청 두꺼운 선 생김
+
+<a href="http://www.naver.com">네이버</a> 
+
+<p><h2><a href="index.html">처음으로</a></h2></p>
+</body>
+</html>
+
+<!--  <a href="url,웹페이지">글자</a>
+a: anchor 글자에 가져가면 손가락모양나오고 웹페이지 찾아감 -->
+
+
+<div></div>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div> 
+
+
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+
+
+<!-- div>ul*3 -->
+<div>
+	<ul></ul>
+	<ul></ul>
+	<ul></ul>
+</div>
+
+
+<!-- ul>li*3 -->
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<!-- input:text -->
+<input type="text" name="" id="" />
+
+<!-- input:submit[value="가자서버로"] -->
+<input type="submit" value="가자서버로" />
+
+
+div#kaja
+<div id="kaja"></div>
+
+div.kaja
+<div class="kaja"></div>
+
+ul>li.kaja$*3
+<ul>
+	<li class="kaja1"></li>
+	<li class="kaja2"></li>
+	<li class="kaja3"></li>
+</ul>
+
+
+div#kaja1+div.kaja2
+<div id="kaja1"></div>
+<div class="kaja2"></div>
+
+<!-- spring -->
+
+bean
+<bean></bean>
+
+dependency>(groupId+artifactId+vertsion)
+<dependency>
+	<groupid></groupid>
+	<artifactid></artifactid>
+	<vertsion></vertsion>
+</dependency>
+<!-- spring -->
+
+
+<!--  ʕ·͡ᴥ·ʔﾉ div랑 span태그의 차이점 -->
+<p>
+<span>나도안녕</span>   <!-- br태그를 사용하여 줄바꿈, 그룹을 구성, inline -->
+<span>나도안녕</span><br>
+<span>나도안녕</span>
+<div>내일 메뉴 궁금</div> <!-- block -->
+<div>내일 메뉴 궁금</div>
+아하 그렇구나
+
+
+

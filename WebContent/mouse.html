@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script>
+document.onmousemove=function(){
+	//그림좌표(100,50) 마우스좌표(100,50)
+	document.getElementById("f1").style.left=event.clientX+"px"
+	document.getElementById("f1").style.top=event.clientY+"px"
+	//document.all.f1.style.top=event.clientY+"px";
+	//IE스타일
+	//IE : document.all.f1
+}
+</script>
+
+</head>
+<body>
+
+<span id="f1" style="position:absolute;">
+<img src="pink.png" border="0" name="krim">
+</span>
+
+</body>
+</html>

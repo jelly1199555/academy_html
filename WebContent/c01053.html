@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script src="jquery-3.1.1.js"></script>
+<!-- <script>
+window.onload=function(){ /* //객체.속성=값에서 객체.이벤트=이벤트핸들러 웹페이지가 열릴때 */
+	document.getElementById('yokeo').style.height='1000px' /* //이걸 수행하라 */
+}          /*  getElementById이거 돔 아무데나 접근 가능 아래 id=yokeo이거   */
+</script> -->
+
+
+<script> 
+$(function(){
+$('img#yokeo').attr('height',1000)//attribute
+})
+</script>
+
+</head> 
+<body>
+
+<img src="./picture/bb.jpg" width="200" id=yokeo>
+<img src="./picture/cafe.jpg" width="200">
+
+</body>
+</html>
