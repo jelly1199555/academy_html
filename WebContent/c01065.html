@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- c-s model(chatting) > web(websocket)
+
+서버로 갈때는
+http://www.naver.com
+http ==> hypertext transfer protocol
+
+<form action = "hello1.jsp" method="get">
+서버에 있는 hello1.jsp를 찾아감 기본이 get방식
+
+action : 서버의 누구찾아가?, .jsp servlet(.java)
+method : 전송방식(get(기본), post)
+
+(get)
+head, body로 처리 그중 head : 이름, 전화번호가 노출됨, 작은용량
+길이가 고정(속도가 up)
+ex) http://....?name=choi&tel=01077876543
+(post) body처리 : 노출안됨, 큰용량, 길이는 당연히 유동, 속도가 상대적 down -->
+
+
+ 
+<form action="hello1.jsp" method="get">
+이름 <input type="text" name="irum"><br>
+전화번호 <input type="text" name="tel"><br>
+<input type="submit" value="가자서버로"> <!-- 서브밋을 버튼으로 바꾸면 엔터 적용안됨,가자서버해도 안가져짐 -->
+<input type="reset" value="취소">
+</form>
+<!-- (1)html5특성을 활용한다.다음예제를 봅시다
+(2)<input type="button" value="가자 서버로" onclick="kaja();"> on붙은게 이벤트
+이벤트가 나옴(에러체크하러 자바스크립트문장으로 가자) -->
+
+<form action="hello1.jsp" method="get">
+이름 <input type="text" name="irum"
+autofocus required placeholder = "kildong hong"><br>
+전화번호 <input type="text" name="tel" required><br>
+이메일 <input type="email" name="email2"
+ required placeholder="aa@aa.com">
+ 생일<input type="date" name="nalja" required>
+ <input type="submit" value="가자서버로"> 
+</form>
+
+</body>
+</html>
