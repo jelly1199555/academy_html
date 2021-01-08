@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+/* 3가지 배치 방법 : inline(가로) inline-block block  */
+.dissytle1 ul li{display:inline;
+}
+/* 가로배치, width, height x margin,padding 좌우간격만 o */
+
+.dissytle2 ul li{display:inline-block; padding:100px; 
+margin: 100px;
+width:130px; height:130px;
+background-color:pink;
+}
+
+.dissytle3 ul li{display:block; padding:10px;
+margin: 10px;
+width:300px; height:130px;
+background-color:pink;
+}
+
+</style>
+
+</head>
+<body bgcolor="yellow" text="blue">
+<div class="dissytle1"> <!-- disstyle1없으면 세로로배치 -->
+
+<ul>                    <!-- 이것은 display:inline -->
+	<li><a href="#">여우1</a></li>
+	<li><a href="#">기린1</a></li>
+</ul>
+</div>
+
+<div class="disstyle2">  <!-- display:inline-block -->
+	<ul> <!-- 세로로 배치되면서 답이 이상하면 브라우저를 ctrl -를 동시에 눌러 글자크기를 줄인다 -->
+		<li><a href="#">여우2</a></li>
+		<li><a href="#">기린2</a></li>
+	</ul>
+</div>
+
+<div class="disstyle3">
+	<ul>
+		<li><a href="#">여우3</a></li>
+		<li><a href="#">기린3</a></li>
+	</ul>
+</div>
+
+<div class="display:none"> <!-- 만들어놓고 안보이게 setVisible(false)개념 -->
+	<ul>
+		<li><a href="#">여우4</a></li>
+		<li><a href="#">기린4</a></li>
+	</ul>
+</div>
+<!-- 댓글쓰세요 누르면 댓글화면이 뜨게 -->
+
+</body>
+</html>

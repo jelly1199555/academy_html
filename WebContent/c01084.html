@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+*{ margin:0; padding:0;}
+#aa, #bb, #cc{
+width:300px;
+height:100px;
+background-color:pink;
+}
+
+#aa{position:static;}
+
+#bb{position:relative; top:0px; left:300px;/* absolute; top:50px; left:50px; */} /* right:50px; */
+
+#cc{ position:relative; top:0px; left:600px; /* (0,0)또는 상위요소로부터 절대거리 */
+/* top:100px; left:100px; */}
+
+</style>
+
+</head>
+<body>
+<!-- absolute와 relative비교 -->
+
+<div id="aa">
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어  
+</div>
+
+<div id="bb">
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어  
+</div>
+
+<div id="cc">
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어
+너는 비가 좋다고 말했어   너는 비가 좋다고 말했어  
+</div>
+
+</body>
+</html>
+

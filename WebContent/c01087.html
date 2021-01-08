@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style> 
+/* img태그이면서-SINSANG클래스 */
+/* floating point number = 실수 => 23.4  0.234*10^2 */
+
+img.sinsang { 
+float:left; /* table일경우 미리 틀을 만들어 놓고 안에 넣어줌 */ /* 근데 이거는 그냥 던져버림 */
+width:100px;
+height:100px;
+padding:10px;
+margin:10px;
+}
+</style>
+</head>
+<body>
+<!-- 화면배치
+1.테이블에 넣어 배치 2.div-float로배치 3.HTML5 semantic배치 -->
+
+<!-- 화면 늘려도 줄여도 7개나오는 화면 -->
+
+<h1>float left layout</h1>
+
+<h3>신상소개(화면 resize해도 잘 보인다)</h3>
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+<img src="./picture/bb.jpg" class="sinsang">
+ 
+</body>
+</html>

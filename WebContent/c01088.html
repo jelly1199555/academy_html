@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/* inline element(줄바꿈이 아닌 가로로 진행하는)
+예) b, textarea, span, image등
+block element어쩌고.. */
+
+#head1 {  /* 정적웹 */
+width:100%; /* 반응형웹(responsive web) */
+height:50px;
+background-color:cyan;
+}
+
+#menu1 {
+float:left;
+width:20%;
+height:300px;
+background-color:pink;
+}
+
+#content1 {
+float:right;
+width:80%;
+height:300px;
+background-color:yellow;
+}
+
+/* 먼저 이걸로 해보자 */
+#foot1 {
+float:left;
+height:100px;
+background-color:green;
+}
+
+/* 화면이 마음에 안든다면 위 주석달고 다음으로 처리 */
+/* #foot1 {
+float:left;
+width:100%;
+height:100px;
+background-color:#00ee00;
+} */
+
+</style>
+
+</head>
+<body>
+
+<div>
+<div id="head1">
+<img src="./picture/bb.jpg" width=10%    height=30px>나는 헤드부분(로고)
+</div>
+<div id="menu1">나는 메뉴가 나오는 부분</div>
+<div id="content1">나는 내용이 나오는 부분</div>
+<div id="foot1">나는 맨 아래 주소등이 나오는 부분</div>
+</div>
+
+</body>
+</html>
