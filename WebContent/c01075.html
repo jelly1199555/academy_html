@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<!-- get방식이므로 서버로 갈때 url부분에 hdata=love가 보이며
+hidden으로 서버로 보냄을 알 수 있다
+전송시 함께 간다
+개발시 별 출력없이 값을 계속 넘겨주어야 할때 등에 사용
+예) 처음에 로그인, 매번 화면 변경시 암호를 물어본다면?
+페이지가 넘어가면 로그인됐는지 모름 그래서 다음페이지에서 if로 물어보면됨
+ -->
+
+<body bgcolor="yellow" text="blue">
+<br><br><br>
+<hr>                             
+
+<form action="hello1.jsp" method="get">
+이름<input type="text" name="irum"><br>
+전화번호<input type="text" name="tel"><br>
+<input type="hidden" name="hdata" value="love"><br>
+<input type="submit" value="가자서버로"><br>
+</form>
+
+
+</body>
+</html>

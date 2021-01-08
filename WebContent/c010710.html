@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="c010711.css">
+<!-- 스타일을 외부파일에서 선언하겠다 -->
+
+<style>
+h1{
+color:red;
+text-align:center;
+text-decoration:underline;
+}
+
+/*overline(윗줄), line-through(취소선)*/
+p {color:blue; font-size:30pt;} /* p로 끝나는거 */
+.redred{color:red} /*클래스(.을붙임, 자바 클래스와는 1도 안같음)*/ /* .은 클래스 */
+/* class=redred 가 붙어있는 태그의 디자인은 이렇게 */
+#myid {color:green; font:bold 20pt Serif,Sans-serif;}
+                                /*끝이 날카, 뭉툭*/
+/*font에서의 순서는 font-style(볼드) font-size font-family(글씨체가 셰리프체, 없으면 산스셰리프체),,순*/
+/*id=myid가 붙어있는 태그의 디자인은 이렇게*/
+
+</style>
+</head>
+<body>
+
+<!-- div.redred -->
+<div class="redred">나 색이 무슨색</div>
+<!-- div#myid -->
+<div id="myid">나는 id로 디자인하네</div>
+
+<h1>난 red이지 말입니다</h1> <!-- 글자 가운데 정렬 -->
+<h3 style="color:violet;">난 보라색이지 말입니다</h3>
+                           <!-- html에 직접 디자인한 css -->
+<p> 나는 단락이고 크기는 30</p>
+
+<font color="brown"> html로 디자인</font><br> <!-- 이건 html 디자인 -->
+
+<h2 class="redred">뭐야 으응 .은 클래스구나 그래서 red네</h2>
+<!-- class사용, 사용시 . 빼고 class="클래스이름" 형식, class="redred"로사용 -->
+
+<div class="redred">뭐야 얘도 red네</div>
+
+<span id="myid">뭐야 으응 #은 id이구나 크기는 20</span>
+<!-- id사용, 사용시 #빼고 id="id명" 형식, id="myid"형식으로 사용
+예) #myid {color:green; font-size:20pt} -->
+
+
+</body>
+</html>

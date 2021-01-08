@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+
+<body bgcolor="yellow" text="blue">
+<h1>소확행 모임 가입을 위해 나의 모든 것을 알려주마</h1>
+<form action="hello.jsp" method="get">
+이름<input type="text" name="irum" value="경석이" readonly>
+<!-- 리드온니 : 수정은 안되고 submit하면 경석이가 서버로감 -->
+비밀번호<input type="password" name="pw" size=22 maxlength=15><br>
+<!-- 사이즈 : 입력란에 한 번에 보여지는 문자 개수의 최대길이
+맥스랭스 : 입력란에 넣을 수 있는 문자의 최대 길이 -->
+전화번호<input type="tel" name="tel1"><br>
+이메일<input type="email" name="email1"><br>
+
+생일년월<input type="month" name="untilmonth"><br>
+생일년월일<input type="date" name="date1"><br>
+생일년월일(2000년 이상 가입안됨)<input type="date" max="1999-12-31" name="notwo"><br>
+생일은 1년중 몇번째주 <input type="week" name="birthweek"><br>
+태어난시간<input type="time" name="birthtime"><br>
+현재 local time <input type="datetime-local" name="nowtime"><br>
+
+좋아하는 색 <input type="color" name="favoritecolor"
+onchange="document.body.style.backgroundColor=this.value"><br>
+좋아하는 숫자(10-100, 10단위) <input type="number" name="favoritenum" min=10 max=100 step=10><br>
+성격(내성적-외향적)<br>
+내성적<input type="range" name="character" min=0 max=100 step=10>외향적<br>
+
+나의 홈페이지주소 <input type="url" name="homepage"><br>
+<!-- url : http://가없으면 입력하라고나옴 -->
+검색은 <input type="search" name="search1" placeholder="검색할것입력"><br>
+<!-- search : 크롬이나 사파리에서 뒤에 x가 나타남 -->
+<input type = "submit" value="아하~~~ 가자서버로">
+</form>
+
+
+
+</body>
+</html>
