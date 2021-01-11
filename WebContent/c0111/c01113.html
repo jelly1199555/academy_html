@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+header{
+width : 15%;
+height : 90px;
+background-color: pink;
+}
+
+h1{
+border : 5px solid crimson;
+padding : 20px;
+color: crimson;
+}
+
+nav{
+float : left;
+width : 20%;
+height:300px;
+}
+
+section{
+float : right;
+width:80%;
+height : 300px;
+}
+
+footer{
+float : left;
+height:100px;
+}
+
+</style>
+
+</head>
+<body>
+<!-- semantic tag 구조
+-------------------
+      header
+-------------------
+nav  section    aside
+     article    
+     article
+-------------------
+     footer
+------------------- -->
+
+<!-- semantic tag(elements)란 
+: tag에 특별한 의미를 지정한 것
+ex)<header>는 헤드부분을 의미하고 헤더지정시에 사용
+<header> : 헤더부분 
+<nav> : navigation 링크부분
+<section> : 콘텐츠부분(h1~h6 제목을 사용)
+<article> : 개별콘텐츠부분 (h1~h6 제목을 사용)
+<aside> : 옆면공간부분 (광고 등)
+<footer> : 아래부분 (주소등)
+<main> : 메인콘텐츠를 의미 -->
+
+	<header>
+		<h1>과일주문</h1> <!-- 검색로봇이 이것참조함 -->
+		<div>
+	</header>
+	<nav>
+		<h1>메뉴</h1>
+		<ul>
+			<li><a href="#">사과메뉴</a></li>
+			<li><a href="#">배메뉴</a></li>
+			<li><a href="#">감메뉴</a></li>
+		</ul>
+   </nav>
+
+	<section>
+		<h1>과일을 말씀드리면</h1>
+		<article>
+			<h1>맛평가</h1>
+			정말 맛있어요
+		</article>
+		<article>
+			<h1>가성비평가</h1>
+			가격대비 가성비도 맘에 들어요
+		</article>
+	</section>
+	<footer>
+		<address>나는 과수원주소구요</address>
+	</footer>
+
+
+
+
+</body>
+</html>

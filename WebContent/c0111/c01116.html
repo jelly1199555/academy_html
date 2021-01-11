@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+html, body {padding:0px; border:0px;}
+
+div{display:table; width:100%;} /* table parent, 즉<table>정의 */
+                                  /* 단, 보더에 대한 정의없으면 선은 없음 */
+header{
+color : pink;
+background-color: aquamarine;
+padding:10px;
+}
+
+nav{  /* td , 즉 float:left*/
+display:table-cell;
+color : red;
+background-color : pink;
+width:20%;
+}
+
+section{
+display : table-cell; /* 위 nav 옆에 티디 , 즉 float:right*/
+color : yellow;
+background-color : blue;
+width : 70%;
+}
+
+aside{
+display : table-cell; /* 얘도 티디 */
+color : red;
+background-color : cyan;
+width : 10%;
+}
+
+footer{
+text-align : center;
+display : table;
+color : white;
+background-color : gray;
+width : 100%;
+}
+
+</style>
+</head>
+<body>
+ <header> <h1> 과일 주문 </h1> </header>
+  <div>   <!-- <table>즉, display:table을 구현해주기 위해  -->
+    <nav> 
+    <h1> 메뉴 </h1>
+      <ul> <li> <a href="#">사과메뉴</a></li>
+           <li> <a href="#">배메뉴</a></li>
+           <li> <a href="#">감메뉴</a></li> </ul>
+   </nav>
+ 
+  <section> 
+     <h1>과일을 말씀드리면</h1> 
+     <article>  
+     <h1> 맛평가 </h1>
+       정말 맛있어요 </article>
+     <article> 
+      <h1> 가성비평가 </h1>
+      가격대비 가성비도 맘에 들어요</article>
+  </section>  
+  
+  
+   <aside> 
+    <h5>과수원 광고 방송</h5>
+    <ul> <li> <a href="#">가자 방송으로</a></li>  </ul>   
+  </aside>
+  </div>   <!-- div 여기서 닫는다 -->   
+  <footer><address>나는 과수원주소구요</address>
+  <p>주소는  종로구 종로동 </p>
+  <p>대표자명 : 김종로</p>  </footer>
+</body>
+</html>
