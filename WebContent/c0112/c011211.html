@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var intBae=[30,50,70] //배열잡고 + 초기치  //대괄호
+//자바에서 뒤에서 하나씩 꺼내서 임시방에 넣은 다음 출력, 이것을 반복하는 문법 --> for, in함수
+
+for(var imsi in intBae){
+	document.write(imsi + "\t" + intBae[imsi] + "<br>");
+	               //index            //value     
+}
+//index  value
+/* 0      30
+   1      50
+   2      70 */
+
+ //var aa="ondal"
+   var myObj={} //여기서 myobj는 객체
+
+   //속성 : 값...
+   var myObj2={color : "red", door:4, price : 300000}
+   //객체는 속성, 메소드를 갖고있다
+   //자바라면 속성을 선언할때 private int price 이렇게,
+   //초기치는 setPrice() 
+   
+   for(var imsi2 in myObj2){
+	   document.write(imsi2 + "\t" + myObj2[imsi2] + "<br>");
+	                  //key          //value
+   }
+    //속성명     초기치(값)
+   /* color    red
+      door     4
+      price    300000 */
+      
+</script>
+</body>
+</html>

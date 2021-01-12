@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 회원번호 2자리를 입력받아 60이상이 입력되면 "실버반으로 가세요"라는 메시지창 출력,
+30이상이면 골드반, 다른 나이이면 푸른반으로 가세요를 출력하는 자바스크립트 프로그램을 작성하시오 -->
+
+	<script>
+		//var : 지역변수 VAR
+		var na2 //여기는 전역변수, 바 함수밖에 선언 하면 전역변수
+		na2 = prompt("회원번호 앞 2자리는", 35)
+		//alert(typeof na2) //typeof는 숫잔지 문잔지 알아내는 연산자 --> "35" //string
+		//alert(typeof 35) //number
+		if (na2 >= "60") //na2 >="60"
+			alert("실버반으로 가세요")
+		else if (na2 >= 20) {
+			//aa=30;//전역변수 역할
+			alert("골드반으로 가세요")
+		} else
+			alert("푸른반으로 가세요")
+			//alert(aa)
+	</script>
+</body>
+</html>

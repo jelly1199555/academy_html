@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>점수를 학점으로 만들라는</title>
+</head>
+<body>
+	<!-- 점수를 입력받아 학점을 출력하시오 단, prompt()와 swith문을 사용 -->
+<!-- 추가 학점계산 진행을 할까요 (예,아니오)가 나오게 하시오 
+window.confirm(), confirm() -->
+	<script>
+	/* var name=prompt("당신의 이름은", "홍길동")
+	document.write("이름이",name,"이시군요") */
+	
+	 var result1 = comfirm("학점계산을 진행할까요")
+		if(result1==false){ //취소 누르면 false가 리턴
+			alert("원하시지 않는군요")
+		}else{ 
+			
+		var score = prompt("점수를 입력하세요",93)
+		}
+		if (score == null) {
+			alert("취소하셨네요")
+		} else { //parseInt()
+			score = Math.floor(score / 10)   // "80" / 10 나누기하면서 숫자로 처리함
+			
+			switch (score) {
+			case 10:
+
+			case 9:
+				alert("A");
+				break
+
+			case 8:
+				alert("B");
+				break
+			case 7:
+				alert("C");
+				break
+
+			case 6:
+				alert("D");
+				break
+
+			case 5:
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+			case 0:
+				alert("F");
+				break;
+			default:
+				alert("잘못누르셨네요");
+				break
+			}
+		
+
+		
+		}
+	</script>
+
+
+</body>
+</html>

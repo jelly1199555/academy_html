@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<br><br><br>
+<h2> 행운의 로또 번호 출력하기</h2>
+<br><br>
+<!-- Math.random() -->
+<Script>
+document.write("<h1>로또 10게임 위해 새로고침 눌러</h1>")
+
+//변수를 선언하고 정렬
+var lotto=[100,2,10,3,1] //1 10 100 2 3
+alert(lotto.sort()) //이건 이상함, 첫자리 기준이라
+
+var lotto10=[100,200,500,350,170] 
+alert(lotto10.sort()) // 이건 답이 제대로 나옴
+
+//숫자는 다음처럼 하세요
+
+//오름차순 정렬
+var bae = [10,300,20,40,50];
+alert(bae[0]); //10
+
+bae.sort(function(aa,bb){ //aa,bb는 아무런 뜻도 없음, 왜썼냐?리턴하려고
+	return aa - bb; //asc
+});
+alert(bae);
+
+//내림차순 정렬
+var bae2 = [10,300,20,40,50];
+bae2.sort(function(moya, wenyul){
+	return wenyul - moya; //desc
+});
+alert(bae2);
+
+
+</Script>
+</body>
+</html>
