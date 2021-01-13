@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function kaja(){
+	//sysout(객체.price)
+	alert(document.getElementById("aa").innerText); //처리할 범위표현, aa에 들어있는 거 띄우는데 글자만
+	alert(document.getElementById("aa").innerHTML); ///////////이너때문에 테이블은빼고 안에 있는 속성만 보여달라
+	alert(document.getElementById("aa").outerText); //outer
+	alert(document.getElementById("aa").outerHTML);////////////
+	alert(document.getElementById("aa").textContent);//innerText랑같은데, 디자인은 못함
+} //IE 4종류 W3C 2종류만 채택, chrome은 다 서비스
+//단, text처리를 위해서 textContent를 사용하면 된다
+</script>
+</head>
+<body>
+<div></div>
+<div></div>
+
+	<script>              /* (윈도우 화면가로-사진가로)/2 하면 정확한 꼭지점위치가 나옴 */
+		alert("윈도우화면크기 : " + window.screen.width + " " + screen.height)
+		//BOM사용 : 윈도우객체.속성 //얘네는 처음에 로고사진띄울때 많이 사용
+		
+	</script>
+	
+	<table id="aa">
+		<tr>
+			<th>love</th>
+		</tr>
+		<tr>
+			<td>
+				<h1 onclick="kaja()">I love you</h1>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>

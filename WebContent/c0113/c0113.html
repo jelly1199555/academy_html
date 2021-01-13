@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>lotto</title>
+</head>
+<body>
+<script>
+var i,j,imsi,arr1;
+
+arr1=new Array();
+
+for(i=0; i<6; i++){
+	arr1[i]=Math.floor(Math.random()*10000)%45+1
+	for(j=0; j<i; j++){
+		if(arr1[i] == arr1[j]){
+			i--;
+		}//if
+	}//for-j
+}//for-i
+
+arr1.sort(function(aa,bb){
+	return aa-bb;
+})
+
+/* document.write("<span style='font-size : 80pt;color:blue'>")
+/* 왜 묶냐 이 부분에 대해서 디자인하고싶은데 디자인이 위에꺼니까 덜렁써있으면 이거에 대한 디자인인지 모르니까 묶어서 알려줌 스팬이
+ */document.write(Math.ceil(Math.random()*45)+" "); /* 적당히 칸을 띄어야 숫자 혼동이 안됨 */
+/* document.write("</span>") */ 
+
+for(i=0; i<6; i++){
+	document.write("<SPAN STYLE='font-size : 80pt; color : ")
+	switch (i){
+	case 0:
+		document.write("blue'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+		
+	case 1:
+		document.write("green'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+		
+	case 2:
+		document.write("violet'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+		
+	case 3:
+		document.write("violet'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+		
+	case 4:
+		document.write("blue'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+		
+	case 5:
+		document.write("orange'>")
+		document.write(arr1[i]+" ");
+		document.write("</SPAN>")
+		break
+	}
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function mut(){
+	alert("멋있어")
+}
+function sa(){
+	alert("사랑해")
+}
+function ebbu(){
+	alert("이뻐")
+}
+function kajaCancel(){
+	if(event.stopPropagation)
+		event.stopPropagation(); //이게 표준형
+	else
+		event.cancelBubble = true; //이건 익스폴로러 
+}
+
+</script>
+</head>
+<body>
+
+	<script>
+		document.onclick = ebbu // 객체.이벤트 = 이벤트처리함수
+	</script>
+	<div onclick="mut()">나어때</div>
+	
+	<div onclick="mut()">
+		<span onclick="sa()"kajaCancel();> 신상 입은 나어때 </span>
+	</div>
+
+</body>
+</html>

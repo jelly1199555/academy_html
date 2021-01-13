@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<!-- value를 대체하는 속성(IE)
+        innerHTML 표준
+        innerText
+        outerHTML 표준
+        outerText -->
+        <script>
+        function nawa(){
+        	var bb11 = document.getElementById("bb1"); //fox1 --> id이름
+        	bb11.innerHTML="<img src='../pic/bb.jpg'>"; //객체.속성=값
+        	//   <div id=bb1><img src></div>
+        	//   alert(bb11.innerHTML) ==> inner범위에 있는 HTML모두를 메시지로 출력해라
+        }             //객체.속성
+        
+        
+        function kaja(){
+        	var t11 = document.getElementById("textid1"); //id이름
+        	t11.innerHTML="<h1>짜~~잔~~~</h1>";
+        	//<div id="textid1"><h1>짜잔</h1></div>
+        	//t11.textContent="짜잔" //글자만,디자인x
+        }
+        </script>
+
+<body> <!-- 구조 : window > document > form > img, input -->
+
+<form name=form1> <!-- 여기서는 그냥 구분해주는 역할 --> 
+<img src="../pic/bb.jpg" onclick="nawa()">
+<div id="bb1"></div> <!-- 그림이 나올 공간을 준비 / 디브와 디브사이에 아무것도 없음-->
+</form>
+
+<form>
+<input type="button" value="문자를 추가하자" onclick="kaja()">
+<div id="textid1"></div> <!-- 글자가 나올 공간을 준비 -->
+</form>
+
+</body>
+</html>

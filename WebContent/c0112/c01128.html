@@ -12,13 +12,13 @@ window.confirm(), confirm() -->
 	/* var name=prompt("당신의 이름은", "홍길동")
 	document.write("이름이",name,"이시군요") */
 	
-	 var result1 = comfirm("학점계산을 진행할까요")
+	 var result1 = confirm("학점계산을 진행할까요")
 		if(result1==false){ //취소 누르면 false가 리턴
 			alert("원하시지 않는군요")
-		}else{ 
+		}else 
 			
 		var score = prompt("점수를 입력하세요",93)
-		}
+		
 		if (score == null) {
 			alert("취소하셨네요")
 		} else { //parseInt()

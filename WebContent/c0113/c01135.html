@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<script>
+function nawa(){
+	var krim = document.createElement("img"); //DOM <img
+	krim.setAttribute("src", "../pic/pink.png"); //코딩을 직접하면 이렇게<img src="../pic/pink.png"
+	krim.setAttribute("id", "pinkpink"); 
+	//위 세줄은 이거 한 줄이랑 같?//<img src=""../pic/pink.png" id="pinkpink"
+			
+			
+	document.form1.appendChild(krim); //계층구조
+	//여우그림을 누르면 이미지 2개(화면 여우, 기린그림 다음에)
+	//<img ...da.png...>
+	//<img src="../pic/pink.png">
+	//<img src="../pic/pink.png">
+	//<img src="../pic/pink.png">
+	/* 
+	<form name = form1>
+	<img src = "../pic/pink.png" onclick="nawa()">
+	<img src = "da" onclick="soomja()">
+	</form> */
+}
+
+//innerHTML <div>요자리에다 내용을 삽입</div>
+//<img src="pink.png">
+
+function soomja(){ //node있는경우만
+	if(document.getElementById("pinkpink")) //지울그림이있어?
+			var f=document.getElementById("pinkpink")
+			f.parentNode.removeChild(document.getElementById("pinkpink"))
+			
+			/* document.getElementById("pinkpink")
+			.parentElement.removeChild(document.getElementById("pinkpink")) */
+}
+//if(a>3)  if(a)
+
+</script>
+
+<body>
+<form name=form1>
+<img src="../pic/pink.png" onclick="nawa()">
+<img src="../pic/da.png" onclick="soomja()">
+</form>
+
+</body>
+</html>

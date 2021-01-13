@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html id="htmlid1">
+<head id="headid1">
+<meta charset="EUC-KR">
+<title>DOM</title>
+<script>
+function kaja(){ //(돔의 목적1)접근
+	
+	            //ie only //비표준 //ie 7,8버전: tagName
+	alert("1st " + document.all.htmlid1.nodeName) //all태그 접근 + id이름을 가진 객체를 얻어 + 태그 name 출력
+	                //도큐먼트는 하얀부문,올은 모든 태그에 접근해보자 ,그중에 이이름을 가진거,에 접근해서
+	                //근데 all이 비표준이니까 크롬에서 돌아가면안됨 근데 됨
+	                //all은 속성
+	                
+    alert("2nd " + document.getElementById("htmlid1").nodeName) //표준형
+	                //올대신 겟어쩌고(대소문자중요):아이디에 의해서 요소값을 얻다 htmlid1 - html얘의 노드네임이뭐냐
+	                //얘는 메소드라서 괄호안에 써줌 
+	
+     //얘는 분리해서 써준거                
+	var headid1 = document.getElementById("headid1") //접근+객체를 get
+	
+	var str1 = headid1.nodeName //태그 name문자열
+	alert("3rd " + str1) //문자열 출력
+}
+
+//(돔의 목적2)동적변경
+//그림을 표현하려면 바디에 <img src="경로">이건 html태그
+/*  자스에서는 img에 접근하려면 get어쩌고로 접근해야함 아까 아이디 만들어놨으니까 그거 쓰면됨
+ 원래 name을 쓰는데 왜 아이디를 쓰냐 여기선 아이디랑 네임이 같은 개념인데 
+ 겟엘리먼트아이디를 썼기때문에 아이디를 써야 알아들음
+ 도큐먼트부터 아이디까지 객체, .src가 속성, 여기에 메뉴그림을 넣으라고했으니까 파리사진이 지워지고 메뉴사진이 들어감
+ 갑자기 변하니까 동적변경
+ var바디아이디1랑 끝에랑 다른 아이딘데 같은이름으로 써야 덜 헷갈림 */
+
+function kaja2(){ //객체.속성(src)=값(이미지이름)
+
+	document.getElementById("parisid1").src="../pic/eiffel.jpg";   /* 동적변경 */
+	var bodyid1=document.getElementById("bodyid1");
+	bodyid1.style.backgroundColor="pink";
+	//css속성을 자스로 사용할때 background-color를 저렇게
+	
+	
+	document.getElementById("bodyid1").style.color="green";
+	document.getElementById("bodyid1").style.fontSize="70px";
+	                                  //font-size -> fontSize(S대문자)
+}
+
+</script>
+
+
+</head>
+<body id="bodyid1">
+DOM이라는
+<input type="button" value="눌러봐 돔의 접근이라는" onclick="kaja();"><br> <!-- 길면 가자로 호출해서 사용 -->
+<img src="../pic/bb.jpg" id="parisid1">
+<input type="button" value="눌러봐 돔의 동적변경이라는" onclick="kaja2();"><br>
+
+</body>
+</html>
