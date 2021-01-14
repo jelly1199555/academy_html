@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.menu1 { /* pointer-손커서 */ 
+cursor : pointer; color : pink;
+background-color : aquamarine; font-size : 20pt;
+}
+
+.menu2{
+color : pink; background-color : pink; font-size : 10pt;
+}
+</style>
+
+<script>      /* bada는 document.getElementById('somenu1')를 받음 */
+function kaja(bada){ /* 토글방식은 항상 이런 방법으로 작성 */
+	if(bada.style.display=="none") //소메뉴가 숨어있어
+		bada.style.display="block"//보여줘
+		else                        //안숨어있어
+			bada.style.display="none" //그럼숨어
+}
+
+</script>
+
+</head>
+<body>
+	<!-- 메뉴1  toggle 방식 메뉴 -->
+	<div class="menu1" id="bigmenu1"
+		onclick="kaja(document.getElementById('somenu1'))">
+		CEO                       <!-- dom : 접근,동적 -->
+		                           
+	</div>
+	
+	<!-- display:none 있는데 숨기겠다/ display:block 숨긴거 보이게 -->
+	<div class="menu2" id="somenu1" style="display: none">
+		<ul>
+			<!-- <li><a href="http://www.naver.com">CEO소개</a> -->
+			<li><a href="#">CEO소개</a>
+			<li><a href="#">CEO인사말</a>
+			<!-- 만들어 놓고 숨겨놓는 거 스윙으로 말하면 visible어쩌고 -->
+		</ul>
+	</div>
+	
+	<!-- 메뉴2  toggle 방식 메뉴 -->
+	<div class="menu1" id="bigmenu2"
+		onclick="kaja(document.getElementById('somenu2'))">
+		회사 소개 및 연혁                     	                           
+	</div>
+	
+	<div class="menu2" id="somenu2" style="display: none">
+		<ul>
+			<li><a href="#">회사소개</a>
+			<li><a href="#">회사연혁</a>
+		</ul>
+	</div>
+
+</body>
+</html>

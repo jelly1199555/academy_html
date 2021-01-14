@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.menu1 { /* pointer-손커서 */ 
+cursor : pointer; color : pink;
+background-color : aquamarine; font-size : 20pt;
+}
+
+.menu2{
+color : pink; background-color : pink; font-size : 10pt;
+}
+</style>
+
+<script>      /* 뭘 눌렀는지 모르니까 일단 다 닫고 마지막에 누른 것만 열기 */
+function kaja(bada){
+	var somenu1=document.getElementById('somenu1')
+	somenu1.style.display="none" //자스에서는 객체.속성=값 //css
+	                             //<style>태그를 사용시 display:none
+	
+		var somenu1=document.getElementById('somenu2')
+		somenu1.style.display="none"
+		
+			var somenu1=document.getElementById('somenu3')
+			somenu1.style.display="none"
+	
+			bada.style.display="block"
+}
+
+</script>
+
+</head>
+<body>
+	<!-- 메뉴1  toggle 방식 메뉴 -->
+	<div class="menu1" id="bigmenu1"
+		onclick="kaja(document.getElementById('somenu1'))">
+		CEO                       <!-- dom : 접근,동적 -->
+		                           
+	</div>
+	
+	<!-- display:none 있는데 숨기겠다/ display:block 숨긴거 보이게 -->
+	<div class="menu2" id="somenu1" style="display: none">
+		<ul>
+			<!-- <li><a href="http://www.naver.com">CEO소개</a> -->
+			<li><a href="#">CEO소개</a>
+			<li><a href="#">CEO인사말</a>
+			<!-- 만들어 놓고 숨겨놓는 거 스윙으로 말하면 visible어쩌고 -->
+		</ul>
+	</div>
+	
+	<!-- 메뉴2  toggle 방식 메뉴 -->
+	<div class="menu1" id="bigmenu2"
+		onclick="kaja(document.getElementById('somenu2'))">
+		회사 소개 및 연혁                     	                           
+	</div>
+	
+	<div class="menu2" id="somenu2" style="display: none">
+		<ul>
+			<li><a href="#">회사소개</a>
+			<li><a href="#">회사연혁</a>
+		</ul>
+	</div>
+	
+	<!-- 메뉴3  toggle 방식 메뉴 -->
+	<div class="menu1" id="bigid3"
+		onclick="kaja(document.getElementById('somenu3'))">
+		주요사업                  	                           
+	</div>
+	
+	<div class="menu2" id="somenu3" style="display: none">
+		<ul>
+			<li><a href="#">AI</a>
+			<li><a href="#">서버</a>
+		</ul>
+	</div>
+
+</body>
+</html>

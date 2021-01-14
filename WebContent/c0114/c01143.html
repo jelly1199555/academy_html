@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function mut(){
+	alert("멋있어")
+}
+function sa(){
+	alert("사랑해")
+}
+function ebbu(){
+	alert("이뻐")
+}
+function kajaCancel(){
+	if(event.stopPropagation)
+		event.stopPropagation(); //이게 표준형
+	else
+		event.cancelBubble = true; //이건 익스폴로러 
+}
+
+</script>
+</head>
+<body>
+	<script>                                               //add어쩌고가 이벤트 만들어내는것
+	/* 객체.메소드(이벤트,함수,true) */
+	document.addEventListener('click', function kocheon(){ //on빼고 클릭쓰고 나머지 출력해라,트루가 캡쳐라는 뜻
+		alert("코딩천재~~capture라는")},true);
+
+	
+	document.onclick = ebbu // 객체.이벤트 = 이벤트처리함수
+	</script>
+	<div onclick="mut()">나어때</div> <!-- 얘부모가 코딩천재(capture)라서 먼저 찍히고
+	                                                                       그다음 타겟(나), 그다음 버블(이뻐) -->
+	<div onclick="mut()">
+		<span onclick="sa()" kajaCancel();> 신상 입은 나어때 </span>
+	</div>
+
+</body>
+</html>

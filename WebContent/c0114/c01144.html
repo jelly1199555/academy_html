@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	//JSON 기법 : javascript object notation (key : value)
+	//by Douglas Clockford  //자료교환, 경량
+
+	/* javascript > jquery > jquery+ajax : json */
+
+	var aa = 30;
+	var bb = {}; //객체
+	var Yuchin = { //객체
+		noon : "예뻐", //속성:값  //key:value
+		sungkyuk : "착함",
+		bab : function() { //메소드
+			alert("먹는속도 빠름")
+		}
+	}
+</script>
+</head>
+<body>
+	<script>  //객체.속성
+		alert(Yuchin.noon + "   " + Yuchin.sungkyuk);
+		Yuchin.bab();  //객체.메소드()
+	</script>
+
+</body>
+</html>
