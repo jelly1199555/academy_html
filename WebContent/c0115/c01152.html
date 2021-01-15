@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+function kaja(){
+	document.getElementById("p1").style.visibility = "hidden";
+}
+
+function kaja2(){
+	document.getElementById("p2").style.visibility = "hidden";
+}
+
+</script>
+
+</head>
+
+<body bgcolor="yellow">
+	나는 메인 내용이고<br> 
+	여기에다 적는다 블라블라 <br>
+	<!-- /////////////////popup////////////////////////// -->
+	<!-- url이 안나오게 하는 팝업창 -->
+	<div id="p1"
+		style="position: absolute; left: 350px; top: 100px;
+		                   z-index : 5; visibility: visible;"> <!-- 보이는속성을 보이게하라 -->
+	
+		<table width=300 height=350>
+			<tr>
+				<td style="border: 2px #0000ff solid" bgcolor=pink> <!-- 솔리드 직선 -->
+				나는 팝업인데 한 html에 같이 있다는<br>
+				만일 이창을 닫으면 hidden 된다는
+				</td>
+			</tr>
+			
+				<input type="button" value="닫기" onclick="kaja();">
+		
+		</table>
+	</div>
+	
+	<div id="p2"
+		style="position: absolute; left: 550px; top: 300px; 
+		                     z-index : 1; visibility: visible;"> <!-- 보이는속성을 보이게하라 -->
+	
+		<table width=300 height=350>
+			<tr>
+				<td style="border: 2px #0000ff solid" bgcolor=pink> <!-- 솔리드 직선 -->
+				PISTACHIOOOOOOOOO<br>
+				embrace creamy coffee bliss with out new latte
+				</td>
+			</tr>
+			
+				<input type="button" value="닫기" onclick="kaja2();">
+		
+		</table>
+	</div>
+	
+	
+	<!-- /////////////////popup////////////////////////// -->
+여기도 메인 부분인감<br>
+맞나보네
+</body>
+</html>

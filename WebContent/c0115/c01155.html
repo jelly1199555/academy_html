@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>KAKAO MAP</title> 
+                                              <!-- = 다음은 각자 받은 스크립트키 -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=10dbb44f30d8ae514babc0ffca67acbd"></script>
+
+<script>
+window.onload=function(){
+	var joongang1 = new daum.maps.LatLng(37.6221588, 126.9255551);
+	              //해당 위도, 경도를 지도의 중앙으로 위치하기 위한 것
+	var mapDesign1 = {
+			zoom : 15,
+			center : joongang1,
+			mapTypeId : daum.maps.MapTypeId.ROADMAP
+			//mapTypeId : daum.maps.MapTypeId.HYBRID
+	        };
+	var map = new daum.maps.Map(document.getElementById("jido1"), mapDesign1);
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="jido1" style="width : 700px; height : 700px">
+여기에 지도나온다</div>
+
+</body>
+</html>

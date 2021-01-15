@@ -1,4 +1,5 @@
 //이 파일명은 event.js
+
 // <body onload="kaja();"> //웸페이지가 로딩될때 /이러면 여기에 html이들어감
 window.onload = function() // 객체.속성=값 --> .이벤트=이벤트처리함수
 {// tag사용없이 load
