@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+
+</head>
+<body>
+<h1 align="left">
+align align align</h1>
+<h1 align="left">
+change align align align</h1>
+
+<script>
+$(function(){
+	alert($("h1:first").attr("align")); //get그냥 출력해라
+	
+	$("h1:last").click(function(aaa){ //aaa또 아무의미없는거 걍 거치는거
+		$(this).attr("align","right"); //인자 두개면 set
+	});//function-click
+});//function
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+
+</head>
+<body>
+<h1>식사메뉴</h1>
+	
+	<div class="f1">
+	<p>식사메뉴</p>
+	<ol id="s1" class="s1">
+		<li>백반</li>
+		<li>돈까스</li>
+		<li>햄버거</li>
+	</ol>
+
+	<p>후식</p>
+	<ul id="h1">
+		<li>커피</li>
+		<li>차</li>
+		<li>과일</li>
+	</ul>
+	</div>
+	
+	<script> //커피
+	//alert($("#h1 li:first").text()); 
+	//alert($("#h1 li:first-child").text());
+	//alert($("#h1 li:nth-child(1)").text());
+	alert($("#h1 li:nth-child(2n-1)").text());
+	alert($("#h1 li:eq(0)").text());
+	alert($("#h1 li:lt(1)").text()); //less than
+	</script>
+</body>
+</html>

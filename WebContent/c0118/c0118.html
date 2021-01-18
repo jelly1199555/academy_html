@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="../jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <h1>jQuery</h1>
+        <script>
+            /* jquery */
+            $(document).ready(function(){
+                alert("바보1");
+            });
+
+            /* js */
+            window.onload=function(){
+                alert("그냥공주");
+            }
+
+            window.onload=function(){
+                alert("평강공주");
+            }
+            /* 같은 명령이 수행되면 맨뒤에것이 수행됨 */
+
+            /* jquery */
+            /* $(document).ready(function(){ */
+            $(function(){
+                alert("바보2");
+            })
+            $(function(){
+                alert("온달");
+            })
+            $(function(){
+                alert("러브라인은 평강공주");
+            })
+        </script>
+    </body>
+</html>
+
+<!-- 
+    jQuery -- client-side
+              javascript framework
+              자바스크립트 긴 문장을 줄여쓰자
+
+              design pattern : 쉽고 정확하게 진행
+
+            (참고) jQuery Mobile
+                └ web app (hybrid app)
+
+            어플 만들때 안드로이드 studio - 자바 ==> native app
+
+            John Resig 이 작성
+            즉, 자바스크립트를 library로 만들어놓고 갖다쓰자
+            <이전 문법>
+            prototype.js => scriptculus
+                        dojo => jQuery
+
+            lotus 1-2-3 > quatro > excel
+            (1-to-3)
+
+            .js를 import(다운받아서 사용)
+            .url을 직접 기술하여 사용
+        -->
+
+        <!-- 
+            jQuery.com
+            두개다 다운로드.
+        -->
