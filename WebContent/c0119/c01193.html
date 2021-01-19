@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+<style>
+.fSize1{font-size : 50px;}</style>
+
+</head>
+<body>
+	<h1>맛집메뉴</h1>
+	<div id=d1>
+		<ul id=ul2 class=ul2>
+			<li id=1><b>불백</b></li>
+			<li id=2>파스타</li>
+			<li id=3>피자</li>
+		</ul>
+	</div>
+	<div id=d2>
+		<ul class=u13>
+			<li id=11>김치전</li>
+			<li id=12>파전</li>
+			<li id=13>녹두전</li>
+		</ul>
+	</div>
+	
+	<div id=d3>
+		<ul class=u123>
+			<li id=100>회덮밥</li>
+			<li id=200>냉면</li>
+			<li id=300>왕만두</li>
+		</ul>
+	</div>
+	
+	<div>
+	<img src="../pic/milk.jpg" id=milk10>
+	<img src="../pic/coffee.jpg" id=coffee1>
+	<img src="../pic/fastfood.jpg" id=fastfood1>
+	</div>
+	
+	<script>
+	/* $(".u13 li:eq(0)").css("fontSize","50px");
+	$(".u13 li:eq(1)").text("두부전");
+	$(".u123 li:eq(0)").html("<h3>회냉면</h3>").css("color","red"); */
+	
+	$(function(){
+		$("div").find("#12").text("두부전");
+		$("div").find("#100").html("<h3>회냉면</h3>").css("color","red");
+		$("img").attr("width",100).attr("height",50);
+		$("#coffee1").attr("width",500).attr("height",500);
+		$("div").find("#11").addClass("fSize1");
+		
+	})
+	
+	
+	</script>
+	
+</body>
+</html>
