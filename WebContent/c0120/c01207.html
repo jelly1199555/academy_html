@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+</head>
+<body>
+<img src="../pic/ajax-loader.gif" />
+<h1>가자 거인나라</h1>
+<div>
+<img src="../pic/bb.jpg" id=bb />
+</div>
+
+<script>
+$(function(){
+	
+	$("img").attr("width",100).attr("height",150);
+	
+	setInterval(function(){
+		$("#bb").animate({width:"+=30"},1000).animate(
+				{height:"+=20"}, 500);
+		
+	}, 3000); //3초간격, setInterval(처리,간격)
+});
+</script>
+</body>
+</html>

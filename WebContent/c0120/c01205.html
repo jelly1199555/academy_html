@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR" >
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+</head>
+<body>
+<h1>여기에 들어오고 나가는 것은 hover로</h1>
+<h2>mouseover야?</h2>
+<h3>나는 어디에</h3>
+<script>
+$(function(){
+	$("h1").hover(function(){
+		$(this).css("background","yellow");
+		
+	}, function(){
+		$(this).css("background","pink");
+			
+	});
+	
+	$("h2").mouseover(function(){
+		$(this).css("color","red");
+	});
+	
+	$("h3").click(function(){
+		$(this).remove();
+	});
+});
+
+</script>
+</body>
+</html>

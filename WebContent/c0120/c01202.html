@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+<style> /* http://colorchart.ltool.net/ */
+
+/* 이 문제는 color를 적용하되 반복문 사용이 요구됨
+반복문 : each()
+여기서는 css가 class를 사용하도록 되어 있고 
+마침 0~8까지 접미사가 붙어있음
+게다가 each는 0,1,2..로 변하는 index인자 사용이 가능
+위 두줄이 매치가 되고 
+제이쿼리에서 클래스가 나오면 추가한다==addClass
+each사용하면 될것 */
+
+.dd0{color : #F70041;}
+.dd1{background : yellow;}
+.dd2{background : red;}
+.dd3{background : orange;}
+.dd4{color : #248bce;}
+.dd5{background : violet;}
+.dd6{background : brown;}
+.dd7{background : cuan;}
+.dd8{color : yellow;}
+</style>
+</head>
+<body>
+	<h1>맛집메뉴</h1>
+	<div id=d1>
+		<ul id=ul2 class=ul2>
+			<li id=1><b>불백</b></li>
+			<li id=2>파스타</li>
+			<li id=3>피자</li>
+		</ul>
+	</div>
+	<div id=d2>
+		<ul class=u13>
+			<li id=11>김치전</li>
+			<li id=12>파전</li>
+			<li id=13>녹두전</li>
+		</ul>
+	</div>
+
+	<div id=d3>
+		<ul class=u123>
+			<li id=100>회덮밥</li>
+			<li id=200>냉면</li>
+			<li id=300>왕만두</li>
+		</ul>
+	</div>
+
+	<script>
+		/* $("*").css("color","blue");
+		$("h1").css("color","black"); */
+
+		$(function() {//인자 2개 들어가는데, 인자1:그냥 증가가됨(얘도 아무거나 써도됨), 인자2:아무거나 써도됨
+			$('li').each(function(index1, content1) { //for문처럼
+				//$(this).css('color', 'blue');
+				$(this).addClass('dd'+index1); //클래스 dd0부터 시작
+			});
+		});
+	</script>
+
+</body>
+</html>

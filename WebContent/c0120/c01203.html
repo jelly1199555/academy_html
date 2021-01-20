@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+<script>
+$(function(){
+	var urlArray1=[ //네임,벨류
+		{key : '네이버', value='https://naver.com'},
+		{key : '레드써니', value='https://blog.naver.com/i2krs/'}
+        ]
+	
+	//var soo=[1,2,3,4];
+	//메뉴 2개를 화면에 출력하는 작업이 필요
+	
+	//$.each(인자1, function(인자 2, 인자3))
+	
+	$.each(urlArray1, function(key1,kab1){ //키원은 순번, 캅1(키~밸류)은 위에 첫번째인자 //for( in )이 있었다는데 기억안남
+		var str1="";
+	str1 += '<a href="'+kab1.value+'">'+'<h1>'+kab1.key+'<h1></a>'+'<br>';
+	
+	//<a href="http://blog.naver.com/i2krs/">
+	//레드써니</a><br>
+	document.body.innerHTML += str1; //이건 돔
+});
+});
+
+/* 원래 이렇게 바디를 써야하는 걸 위에쓴 걸로 쓸 수 있음 */
+/* <body>
+<a href="http://naver.com">네이버</a><br>
+<a href="http://naver.com">레드써니</a><br> */
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

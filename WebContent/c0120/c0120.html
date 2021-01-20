@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR" />
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+</head>
+<body>
+
+<img src="../pic/milk.jpg" id=milk1 /> <!-- 1 -->
+<img src="../pic/coffee.jpg" id=coffee1 /> <!-- 2 -->
+<img src="../pic/fastfood.jpg" id=fastfood1 /> <!-- 3 -->
+
+<!-- 그림순서를 2 3 1 로 만들면 코딩 순으로 그림이 출력되므로 
+다시 그림순서를 3 1 2 로 하면
+그림순서를 그렇게 하려면 방법은?
+맨 앞그림을 그림 중 맨 뒤로 보내면 되는데 그 위치가 body의 마지막부분이므로 appendTo사용
+
+타이머를 줘야 하는데 
+setTimeout(인자1, 인자2) : 인자2후에 인자1을 수행(1번만)
+setInterval() : 얘는 계속반복 -->
+
+<script type="text/javascript">
+$(function(){
+	$("img").css("width",100);
+	$("img").css("height",100);
+	
+	/* setInterval(function(){ //setInterval(arg1,3000) //계속
+		$("img").first().appendTo("body");
+	}, 3000); //3초 간격, 여기도 인자 두갠데 3000앞까지 인자 1 */
+	
+	/* setInterval(function(){
+	$("<img>")
+	.attr("src","../pic/milk.jpg")
+	.attr("id","mm").appendTo("body");
+	},3000); */
+	
+	setInterval(function(){
+		$("img:first").remove(); //그림삭제
+		},3000);
+});</script>
+
+
+</body>
+</html>
