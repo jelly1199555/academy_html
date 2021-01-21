@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//자바스크립트->제이쿼리, 에이젝스->제이쿼리에이젝스
+var xhr1 = null;  //xhr선언
+
+function getXHR(){  //xhr함수(통신객체생성하기)
+	try{  //통신객체 //cross browsing
+		if(window.XMLHttpRequest)  //표준형 //ie11,ff,ch
+			return new XMLHttpRequest;  //xhr통신객체생성
+		else if(Window.ActiveXObject)  //old IE?
+			return new ActiveXObject("MSXML2.XMLHTTP");
+		else if(Window.ActiveXObject)
+			return new ActiveXObject("Microsoft.XMLHTTP");
+	}catch(e){
+		xhr1=null; }
+}//getXHR-end
+
+function kajaServer(){ //서버로 가는 함수, 정의문
+	xhr1 = getXHR(); //new XHR //xhr객체 생성됨 위에 getxhr을 호출, 통신객체가 xhr1여기에 쏙 들어감
+	xhr1.onreadystatechange = callback1; //중요, 무조건 다 소문자
+	xhr1.open("get", "../novel.txt", true); //비동기  "../kaja.jsp"
+	xhr1.send(null);
+}
+
+function callback1(){
+	var ta = document.getElementById("ta"); //ta는 textarea
+	switch(xhr1.readyState){ //아까 온레디어쩌고때문에 계쏙 여기로 옴 현재상태가 무야?물어봐서 아래처럼대답
+	/* case 0:
+		ta.value += "객체 생성 \n"; break;
+	case 1:
+		ta.value += "send메서드사용전 \n"; break;
+	case 2:
+		ta.value += "send메서드호출 \n"; break;
+	case 3:
+		ta.value += "아직결과 다 안옴 \n"; break; */
+	case 4:
+		ta.value += "";
+		
+		if(xhr1.status==200){
+			ta.value +="";
+			ta.value += xhr1.responseText + "\n";  //responseXML
+		} /* <food><irum>사과</irum><price>2500</price></food>
+		xml은 구조적, 체계적이므로 전송데이터로 사용, 환경설정
+		단, xml은 html형식으로 변환 */
+		
+		else{
+			ta.value += "에러발생\n";
+			ta.value += xhr1.status + "\t" + xhr1.statusText + "\n";
+		                  //404               //not found
+		}
+			break;
+	}
+}
+
+
+
+</script>
+</head>
+<body>
+<h3>NOVEL</h3>
+<br>
+<textarea rows="20" cols="100" id="ta"></textarea>
+<br>
+<input type="button" value="소설읽기" onclick="kajaServer()">
+
+</body>
+</html>

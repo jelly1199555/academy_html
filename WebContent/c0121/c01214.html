@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+var xhr1 = null;
+
+function getXHR(){ 
+	try{ 
+		if(window.XMLHttpRequest) 
+			return new XMLHttpRequest;  
+		else if(Window.ActiveXObject)
+			return new ActiveXObject("MSXML2.XMLHTTP");
+		else if(Window.ActiveXObject)
+			return new ActiveXObject("Microsoft.XMLHTTP");
+	}catch(e){
+		xhr1=null; }
+}
+
+function kajaServer(url){ //member.jsp
+	var name = document.form1.name.value; //인풋타입텍스트를 보내야해서 이거 씀 계층구조로 되어있음 폼은
+	var age = document.form1.age.value;
+	        /* =url+"?name=hong&age=33"; */ //들어온 이름이랑 나이를 이런식으로 보내야함 (이건 직접쓴거)
+	serverURL = url+"?name="+encodeURIComponent(name)+"&age="+age;
+	xhr1 = getXHR(); 
+	xhr1.onreadystatechange = callback1; 
+	xhr1.open("get", serverURL, true); 
+	//alert(serverURL);
+	xhr1.send(null);
+}
+
+function callback1(){
+	var ta1 = document.getElementById("ta1"); 
+    /* var url = document.getElementById("ta1"); */ 
+	switch(xhr1.readyState){ 
+	case 4:
+		ta1.value += "";
+		
+		if(xhr1.status==200){
+			ta1.value +="";
+			ta1.value += xhr1.responseText + "\n"; 
+		} 
+		
+		else{
+			ta1.value += "에러발생\n";
+			ta1.value += xhr1.status + "\t" + xhr1.statusText + "\n";
+		      
+		}
+			break;
+	}
+}
+
+function kajaClear(){
+	var ta1 = document.getElementById("ta1");
+	ta1.value="";
+	document.form1.name.value="";
+	document.form1.age.value="";
+}
+
+</script>
+</head>
+<body>
+<h3>회원관리</h3>
+<hr>
+<form name=form1>
+<textarea rows="20" cols="100" id="ta1" name="ta1"></textarea>
+<br><br><br>
+이름 : <input type="text" name="name"><br>
+나이 : <input type="text" name="age"><br>
+<br><br><br>
+<input type="button" value="회원입력확인" onclick="kajaServer('../member.jsp')">
+<input type="button" value="초기화" onclick="kajaClear()">
+</form>
+</body>
+</html>
