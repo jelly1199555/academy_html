@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery.js"></script>
+<script src="../jquery.autocomplete.js"></script>
+
+<script>
+var loveline = ["babo", "ondal", "kongjoo", "cinderella", "choonhyang",
+	"leedoryung", "바보", "온달", "공주", "신데렐라", "춘향", "이도령",
+	"바다", "온도", "축구공","신발", "향단이","도자기"];
+</script>
+
+</head>
+<body>
+<script>
+for(var i=0; i<loveline.length; i++){
+	document.write(loveline[i] + "\t");
+}
+document.write("\n")
+</script>
+<script>
+$(function(){
+	//$("#lovelinename").autocomplete(loveline); //아이디 찾아가서 배열을 자동완성시켜라
+	$("#lovelinename").autocomplete(loveline,{ matchContains : true});
+
+});
+</script>
+<form>
+러브라인 이름 : 
+<input type="text" name="lline" id="lovelinename">
+</form>
+</body>
+</html>
