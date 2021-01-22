@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+<script>
+$(function(){/* /window.onload= */
+	$.ajax({
+		url: "../menu.jsp", //xml data
+		type: "get",
+		success : function(data1){ //데이터도 선언안되어있음, 통로
+			$(data1).find("menu").each(function(){//메뉴찾아서 각각 수행해라
+				var t1 = $(this).find("title").text() //해당메뉴에서 ㅌㅏ이틀찾아서 해당글씨출력
+				var p1 = $(this).find("price").text()
+				var s1 = $(this).find("result").text()
+				$("<h3></h3>").text(t1+"\t"+p1+"\t"+s1)//<h3>스파게티 7000 맛있음</
+				.appendTo("#result"); //오리지널 ajax에서는 //responseXML
+			});
+		},
+		error : function(xhr1,status){
+			alert(xhr1.status);
+		}
+	});
+});
+</script>
+</head>
+<body>
+<h3> ajax kaja(responsexml)</h3>
+그러니까 이번에는 xml을 받아서 출력해보자
+<br>
+<div id=result></div>
+<br>
+</body>
+</html>

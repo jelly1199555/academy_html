@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="../jquery-3.5.1.js"></script>
+<script>
+$(function(){//겟제이슨은 서버로부터 제이슨 배열 형태를 겟
+	         //menu.jsp에 있는 형식은 스트링으로 받음
+	$.getJSON("../menu2.jsp", function(data1){
+		$.each(data1,function(name1,value1){ //반복문, 네임1은 하나씩 증가, 밸류1은 넘어오는 값
+			$("<h3></h3>").text(value1.title+" "
+			+value1.price+ " "+value1.evaluation).appendTo("div");
+		});
+	});
+});
+//이런 작업을 하겠다는 것
+//$("div").append(value1.title+" "+value1.price+" "+value1.evaluation);
+</script>
+</head>
+<body>
+<h3>ajax</h3>
+앞으로 만날 data교환에서 json을 자주 만나게 될것이므로<br>
+json을 좀 더 알아보자는<br>
+<br>
+<div id=result></div>
+<br>
+</body>
+</html>

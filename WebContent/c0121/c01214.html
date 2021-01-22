@@ -22,7 +22,7 @@ function kajaServer(url){ //member.jsp
 	var name = document.form1.name.value; //인풋타입텍스트를 보내야해서 이거 씀 계층구조로 되어있음 폼은
 	var age = document.form1.age.value;
 	        /* =url+"?name=hong&age=33"; */ //들어온 이름이랑 나이를 이런식으로 보내야함 (이건 직접쓴거)
-	serverURL = url+"?name="+encodeURIComponent(name)+"&age="+age;
+	serverURL = url+"?name="+"WebContent/jquerybase2.html"+"&age="+age;
 	xhr1 = getXHR(); 
 	xhr1.onreadystatechange = callback1; 
 	xhr1.open("get", serverURL, true); 
