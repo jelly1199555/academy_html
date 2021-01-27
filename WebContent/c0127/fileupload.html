@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body> <!-- d드라이브에 upbang폴더, WEB-INF/lib아래에 cos.jar가 있나 확인 -->
+<h1> file upload</h1>
+<form action="uploadtoserver.jsp" method="post" enctype="multipart/form-data">
+<!-- cos.jar의 multipart -->                      <!-- 멀티파트라는 외부라이브러리 -->
+이름 : <input type="text" name="irum1"><br>
+파일 : <input type="file" name="file1"><br>
+
+<input type="submit" value="가자업로드로"><br>
+<input type="reset" value="취소">
+</form>
+
+</body>
+</html>
