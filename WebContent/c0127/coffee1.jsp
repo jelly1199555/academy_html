@@ -30,7 +30,7 @@ for(int i=0; i<jepoom.length; i++){
 		hap+= 900;
 }
 
-int jan = cash=hap;
+int jan = cash-hap;
 if(jan <0){
 	out.println("<h1>돈이 부족합니다</h1>");%>
 	<a href ="coffee.jsp">다시 주문화면으로</a>

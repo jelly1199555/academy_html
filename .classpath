@@ -13,6 +13,9 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jelly/Documents/카카오톡 받은 파일/새 폴더/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jelly/Documents/카카오톡 받은 파일/새 폴더/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jelly/Documents/카카오톡 받은 파일/새 폴더/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jelly/Documents/카카오톡 받은 파일/새 폴더/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -13,7 +13,7 @@
 
 <table border=2 width=700>
 <tr><td colspan="2" align="center">음료자판기</td></tr>
-<tr><td align="center">금액을 넣어주세요</td>
+<tr><td align="center" >금액을 넣어주세요</td>
 <td><input type="number" name="cash" style="width:100%" required></td></tr>
 <!-- number때문에 문자는 입력이 안됨 -->
 <tr><td align="center">커피를 선택하세요</td></tr>

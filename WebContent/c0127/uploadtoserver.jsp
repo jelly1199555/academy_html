@@ -12,7 +12,8 @@
 <%
 String bang = "d:/upbang";
 
-MultipartRequest mr1 = new MultipartRequest(request, bang, 10*1024*1024, 
+MultipartRequest mr1 = new MultipartRequest
+(request, bang, 10*1024*1024, 
 		"euc-kr", new DefaultFileRenamePolicy());
 
 //request사용 못하므로 대신 멀티파티리퀘스트 객체 mr1 사용
