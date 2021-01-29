@@ -38,5 +38,14 @@ for(TelInfoVO imsi : tiArray){%>  <!-- 객체 컬렉션중 하나를 뽑아내서 -->
 </tr>
 </table>
 
+<table border=0>
+<tr>
+<td><a href="SawonInsertForm.jsp">[입력]</a></td>
+<td><a href="SawonAllforUpdate.jsp">[수정]</a></td>
+<td><a href="SawonAllViews.jsp">[모두보기]</a></td>
+</tr>
+</table>
+
+
 </body>
 </html>

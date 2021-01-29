@@ -22,7 +22,7 @@
 <td><a href="SawonInsertForm.jsp">[입력]</a>
 <td><a href="SawonAllforUpdate.jsp">[수정]</a></td>
 <td><a href="SawonAllforDelete.jsp">[삭제]</a></td>
-<td><a href="SawonAllView.jsp">[모두보기]</a></td>
+<td><a href="SawonAllViews.jsp">[모두보기]</a></td>
 </tr>
 </table>
 

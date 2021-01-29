@@ -7,15 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-${pageScope.page1}<br>
-${requestScope.req1 }<br>
-${sessionScope.ses1 }<br>
-out.println((String)session.getAttribute("ses1"));
-
-${applicationScope.app1}<br>
-
-<a href="elscope2.jsp">scope가보자</a>
-
+<h1>${param.name }님의 점수는 ${param.score}점이시군요</h1>
+<a href="mvc1que.html">입력화면</a>
 </body>
 </html>

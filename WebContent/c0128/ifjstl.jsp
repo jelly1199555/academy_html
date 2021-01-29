@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>jstl if</title>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
 </head>
 <body>
-    <!-- request.getParameter() 대신 다른것이 무엇????? -->
+
+<H2>CAFE</H2>
 <form action="200_kaja2.jsp">
-<label for="hobby">취미는</label><br>
-   <select  name="chimi" >
-      <option value="tennis">tennis</option>
-      <option value="soccer">soccer</option>
-      <option value="golf">golf</option>
-   </select>
-<input type="submit" value="가자">
+<select name="coffee">
+<option value="americano">americano</option>
+<option value="latte">latte</option>
+<option value="vienna">vienna</option>
+</select>
+
+<input type="submit" value="ok">
 </form>
 </body>
 </html>

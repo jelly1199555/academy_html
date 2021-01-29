@@ -29,7 +29,7 @@ boolean b1 = tidao.insert_nametel(id, name, tel, sDate);
 		//즉, no error b1에는 true
 		
 		if(b1)
-			response.sendRedirect("SawonAllVies.jsp"); //insert ok
+			response.sendRedirect("SawonAllViews.jsp"); //insert ok
 			//전부다보러가자
 			else
 			{%>

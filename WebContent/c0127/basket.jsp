@@ -94,6 +94,6 @@
 	<br>
 	<br>
 
-	<a href="JSP12_Train2_choose.jsp">계속 사기</a>
+	<a href="bask.jsp">계속 사기</a>
 </body>
 </html>
